@@ -1,0 +1,158 @@
+:root {
+    --main-color: #1877f2;
+    --outline-focus-color: rgb(195, 195, 255);
+    --btn-color-hover: #166bdb;
+}    
+body {
+    background-color: rgb(240, 242, 245);
+}
+.logo-sec .logo {
+    width: 350px;
+}
+.logo-sec .logo img {
+    max-width: 95%;
+}
+@media(min-width: 767px) and (max-width:992px) {
+    .logo-sec p, .login-sec {
+        width: 70%;
+    }
+}
+.login-sec .form-holder {
+    width: 90%;
+}
+@media(min-width:992px) {
+    .logo-sec {
+        height: 300px;
+    }
+    .login-sec .form-holder {
+        width: 450px;
+    }
+}
+.login-sec form input:not(input[type=submit])::placeholder {
+    font-size: 18px;
+    color: rgb(121, 121, 121);
+}
+.login-sec form input:not(input[type=submit]):focus::placeholder {
+    color: silver;
+}
+.login-sec form input:not(input[type=submit]):focus {
+    outline-color: var(--outline-focus-color) !important;
+}
+.login-sec form input[type=submit] {
+    background-color: var(--main-color);
+}
+.login-sec form input[type=submit]:hover {
+    background-color: var(--btn-color-hover);
+}
+.login-sec button {
+    width: fit-content;
+    background-color: #42b72a;
+}
+.login-sec button:hover {
+    background-color: #3ca327;
+}
+.logo-sec, .login-sec {
+    flex-basis: 50%;
+}
+.login-sec form a:hover, .login-sec p a:hover {
+    text-decoration: underline!important;
+}
+/********************** Sign Up Page *************************/
+header {
+    background-color: var(--main-color);
+}
+header i {
+    cursor: pointer;
+}
+@media(max-width: 767px){
+    .signup-box {
+        max-width:350px !important;
+    }
+    .double-column .field,footer {
+        width: 285px !important;
+    }
+}
+@media(min-width: 768px) {
+    .signup-box {
+        width: 700px !important;
+    }
+    .double-column .field,footer {
+        width: 310px !important;
+    }
+}
+.form-sec input:not(input[type=radio]) {
+    padding: 7px;
+    border-radius: 5px;
+    border-color: rgb(196, 196, 196)!important;
+}
+.form-sec input:not(input[type=radio]):focus,.dob div select:focus {
+    outline-color: var(--outline-focus-color);
+}
+footer input {
+    background-color: var(--main-color);
+    flex-basis: 50%;
+}
+footer input:hover {
+    background-color: var(--btn-color-hover);
+}
+.form-sec label:not(.g-sec label) {
+    font-size: 17px;
+    font-weight: bold;
+    color: var(--main-color);
+    padding-bottom: 2px;
+}
+.form-sec form input::placeholder {
+    color: rgb(153, 153, 153);
+}
+.form-sec form input:focus::placeholder {
+    color: rgb(214, 214, 214);
+}
+.male, .female {
+    flex-basis: 49.6%;
+}
+.dob div {
+    flex-basis: calc(100% / 3);
+}
+.dob div select {
+    width: 98%;
+}
+.field i.mark {
+    display: none;
+    color: green;
+    background: none;
+}
+.field i.info {
+    color: #69a9fd;
+    opacity: 0.4;
+    background: none;
+    cursor: pointer;
+}
+.field i.info:hover {
+    color: #1877f2;
+    opacity: 0.8;
+    background: none;
+}
+.hold1,.hold2,.hold3,.hold4,.hold5,.hold6{
+    position: relative;
+}
+.showfname,.showlname,.showeeadrs,.showmnmbr,.shownpas,.showcpas {
+    display: none;
+    position: absolute;
+    right: 25px;
+    border: 1px solid rgb(255, 221, 31);
+    /* background-color: rgb(255, 218, 53); */
+    color: white;
+    border-radius: 3px;
+    padding: 5px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+/********************** Welcome Page *************************/
+.welc-facebook {
+    height: 100vh;
+}
+.welc-facebook div {
+    height: 100%;
+    background-image: url(../imgs/facebook.gif);
+    background-position: 100%;
+}
